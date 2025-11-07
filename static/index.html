@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grana Segura Surebet</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <canvas id="bg-particles"></canvas>
+    <div class="container">
+      <header>
+        <div class="logo">💰 GRANA SEGURA</div>
+        <p class="subtitle">Calculadora de Surebets • até 3 casas</p>
+      </header>
+
+      <main>
+        <div class="form-card glass">
+          <label>Odd 1</label>
+          <input type="number" id="odd1" step="0.01" placeholder="Ex.: 2.10" />
+
+          <label>Odd 2</label>
+          <input type="number" id="odd2" step="0.01" placeholder="Ex.: 3.50" />
+
+          <label>Odd 3 (opcional)</label>
+          <input type="number" id="odd3" step="0.01" placeholder="Ex.: 1.72" />
+
+          <label>Stake total (R$)</label>
+          <input type="number" id="stake" step="0.01" placeholder="Ex.: 100" />
+
+          <button id="calc-btn" class="btn-neon">CALCULAR</button>
+        </div>
+
+        <div id="result" class="result-card glass hidden">
+          <h2>Resultado</h2>
+          <div class="result-grid">
+            <div>
+              <span>Arbitragem total</span>
+              <strong id="arb-percent">--</strong>
+            </div>
+            <div>
+              <span>Lucro líquido</span>
+              <strong id="lucro-liquido">--</strong>
+            </div>
+            <div>
+              <span>Lucro (%)</span>
+              <strong id="lucro-percentual">--</strong>
+            </div>
+          </div>
+          <h3>Apostas por casa</h3>
+          <ul id="bets-list"></ul>
+          <p id="legenda" class="legenda"></p>
+        </div>
+      </main>
+    </div>
+
+    <audio id="win-audio" src="/static/sound.mp3" preload="auto"></audio>
+    <script src="/static/particles.js"></script>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
