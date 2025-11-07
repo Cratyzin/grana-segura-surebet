@@ -11,5 +11,6 @@
     "strict": false
   },
   "include": ["src/**/*"],
+  "include": ["src/**/*", "src/stubs/**/*"],
   "exclude": ["node_modules", "dist"]
 }
